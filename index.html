@@ -1,98 +1,455 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="https://github.com/favicon.ico" />
-    <title>Portifolio</title>
+    <title>João Paulo - Full Stack Developer</title>
 
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/responsive.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a0881829cd.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Dev.JOTAPE</h1>
+    <div class="app-container">
+        <!-- SIDEBAR -->
+        <aside class="sidebar dark-card" data-sidebar>
+            <div class="sidebar-info">
+                <figure class="avatar-box">
+                    <img src="./img/foto-pessoal.jpeg" alt="João Paulo">
+                </figure>
+                <div class="info-content">
+                    <h1 class="name" title="João Paulo">João Paulo</h1>
+                    <p class="title">Full Stack Developer</p>
+                </div>
+                <button class="info_more-btn" data-sidebar-btn>
+                  <span>Show Contacts</span>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </button>
+            </div>
 
-        <nav>
-            <a href="https://github.com/JoaoPaulo121212" target="_blank">
-                <i class="fa-brands fa-github"></i>
-            </a>
+            <div class="sidebar-info_more">
+              <div class="separator"></div>
 
-            <a href="http://www.linkedin.com/in/jo%C3%A3o-paulo-albuquerque-de-almeida-marques-2a6b6b2a8" target="_blank">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
+              <div class="sidebar-contacts">
+                  <ul class="contacts-list">
+                      <li class="contact-item">
+                          <div class="icon-box">
+                              <i class="fa-regular fa-envelope"></i>
+                          </div>
+                          <div class="contact-info">
+                              <p class="contact-title">Email</p>
+                              <a href="mailto:joaopauloalbuquerque606@gmail.com" class="contact-link" title="joaopauloalbuquerque606@gmail.com">joaopauloalbuquerque606@gmail.com</a>
+                          </div>
+                      </li>
+                      <li class="contact-item">
+                          <div class="icon-box">
+                              <i class="fa-solid fa-mobile-screen"></i>
+                          </div>
+                          <div class="contact-info">
+                              <p class="contact-title">Phone</p>
+                              <a href="tel:+5561991995261" class="contact-link">+55 (61) 99199-5261</a>
+                          </div>
+                      </li>
+                      <li class="contact-item">
+                          <div class="icon-box">
+                              <i class="fa-solid fa-location-dot"></i>
+                          </div>
+                          <div class="contact-info">
+                              <p class="contact-title">Location</p>
+                              <address>Brasília, Brazil</address>
+                          </div>
+                      </li>
+                  </ul>
+              </div>
 
-            <a href="https://www.instagram.com/_.jotape__/" target="_blank">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-        </nav>
-    </header>
+              <div class="separator"></div>
 
-    <main>
-        <section class="main-content">
-            <article class="text">
-              <h2>🙋🏽‍♂️Sobre mim</h2>
-               <p>  Olá! Meu nome é João Paulo Albuquerque de Almeida Marques, sou de Brasília-DF, tenho 20 anos e sou desenvolvedor full stack. Estudante do curso de Ciência da Computação Universidade Católica de Brasília (UCB), estou sempre em busca de novos desafios e oportunidades para crescer profissionalmente.
-                    Atualmente trabalho com tecnologias como React, Node.js e Swift. 
-                    Minha paixão é criar soluções inovadoras e eficientes para problemas reais.
-                </p>
+              <ul class="social-list">
+                  <li class="social-item">
+                      <a href="https://github.com/jotape12-Dev" class="social-link" target="_blank">
+                          <i class="fa-brands fa-github"></i>
+                      </a>
+                  </li>
+                  <li class="social-item">
+                      <a href="http://www.linkedin.com/in/joao-paulo-albuquerque-de-almeida-marques-2a6b6b2a8" class="social-link" target="_blank">
+                          <i class="fa-brands fa-linkedin"></i>
+                      </a>
+                  </li>
+                  <li class="social-item">
+                      <a href="https://www.instagram.com/_.jotape__/" class="social-link" target="_blank">
+                          <i class="fa-brands fa-instagram"></i>
+                      </a>
+                  </li>
+              </ul>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content dark-card">
+            <!-- NAVBAR -->
+            <nav class="navbar">
+                <ul class="navbar-list">
+                    <li class="navbar-item"><button class="navbar-link active" data-nav-link="about">About</button></li>
+                    <li class="navbar-item"><button class="navbar-link" data-nav-link="resume">Resume</button></li>
+                    <li class="navbar-item"><button class="navbar-link" data-nav-link="portfolio">Portfolio</button></li>
+                </ul>
+            </nav>
+
+            <!-- ABOUT SECTION -->
+            <article class="about active" data-page="about">
+                <header>
+                    <h2 class="h2 article-title">About Me</h2>
+                </header>
+                <section class="about-text">
+                    <p>
+                        Hello! My name is João Paulo Albuquerque de Almeida Marques. I'm 20 years old, from Brasília, Brazil, and I'm a full stack developer. Currently studying Computer Science at the Catholic University of Brasília (UCB), I am always looking for new challenges and opportunities to grow professionally.
+                    </p>
+                    <p>
+                        I currently work with technologies like Swift, Node.js, React. My passion is to create innovative and efficient solutions for real-world problems.
+                    </p>
+                </section>
+
+                <!-- SERVICES / TECHS -->
+                <section class="services">
+                    <h3 class="h3 service-title">What I'm Doing</h3>
+                    <ul class="service-list">
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <img src="./img/techs/react-logo.png" alt="React" width="40">
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 item-title">Front-End Development</h4>
+                                <p class="service-item-text">
+                                    Building modern and reactive web interfaces using React, HTML, CSS, and JavaScript.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <img src="./img/techs/node-logo.png" alt="Node.js" width="40">
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 item-title">Back-End Development</h4>
+                                <p class="service-item-text">
+                                    Building robust and scalable APIs using Node.js, Python, Java, and Docker for orchestration.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <img src="./img/techs/swift-logo.png" alt="Swift" width="40">
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 item-title">Mobile Development</h4>
+                                <p class="service-item-text">
+                                    Developing native applications for the iOS ecosystem using Swift.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <img src="./img/techs/python-logo.webp" alt="Python" width="40">
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 item-title">Data & Automation</h4>
+                                <p class="service-item-text">
+                                    Creating scripts, automations, and data manipulation using Python.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                </section>
             </article>
 
-            <aside class="techs">
-                <h2>Tecnologias</h2>
-                <div class="cards-container">
-                    <div class="card">
-                        <img src="./img/techs/react-logo.png" alt="Logo do React">
-                    </div>
-                    <div class="card">
-                        <img src="./img/techs/js-logo.png" alt="Logo do JavaScript">
-                    </div>
-                    <div class="card">
-                        <img src="./img/techs/html-logo.png" alt="Logo do HTML">
-                    </div>
-                    <div class="card">
-                        <img src="./img/techs/css-logo.png" alt="Logo do CSS">
-                    </div>
-                    <div class="card">
-                        <img src="./img/techs/swift-logo.png" alt="Logo do Swift">
-                    </div>
-                    <div class="card">
-                        <img src="./img/techs/node-logo.png" alt="Logo do Node.js">
-                    </div>
-                    <div class="card">
-                        <img src="./img/techs/python-logo.webp" alt="Logo do Python">
-                    </div>
-                    <div class="card">
-                        <img src="./img/techs/java-logo.png" alt="Logo do Java">
-                    </div>
-                    <div class="card">
-                        <img src="./img/techs/docker-logo.png" alt="Logo do Docker">
-                    </div>
-                    <div class="card">
-                        <img src="./img/techs/typescript-logo.png" alt="Logo do TypeScript">
-                    </div>
+            <!-- RESUME SECTION -->
+            <article class="resume" data-page="resume">
+              <header>
+                <h2 class="h2 article-title">Resume</h2>
+              </header>
+
+              <section class="timeline">
+                <div class="title-wrapper">
+                  <div class="icon-box">
+                    <i class="fa-solid fa-book-open"></i>
+                  </div>
+                  <h3 class="h3">Education</h3>
                 </div>
-            </aside>
+                <ol class="timeline-list">
+                  <li class="timeline-item">
+                    <h4 class="h4 timeline-item-title">Catholic University of Brasília (UCB)</h4>
+                    <span>2024 — Present</span>
+                    <p class="timeline-text">
+                      Student of Computer Science, focusing on full stack development and mobile technologies.
+                    </p>
+                  </li>
+                </ol>
+              </section>
+
+              <section class="timeline">
+                <div class="title-wrapper">
+                  <div class="icon-box">
+                    <i class="fa-solid fa-briefcase"></i>
+                  </div>
+                  <h3 class="h3">Experience</h3>
+                </div>
+                <ol class="timeline-list">
+                  <li class="timeline-item">
+                    <h4 class="h4 timeline-item-title">Apple Developer Academy</h4>
+                    <span>2025 — Present</span>
+                    <p class="timeline-text">
+                        Implemented REST API integrations, gesture recognition using Vision Framework, and complex data persistence
+                        with SwiftData/CoreData. Collaborated in cross-functional agile teams (designers and developers) following Scrum practices,
+                        participating in sprint planning, reviews, and code reviews. Solved real-world challenges using Challenge Based Learning (CBL) methodology, from research and ideation
+                        to product delivery and App Store publication.
+                    </p>
+                  </li>
+                </ol>
+              </section>
+
+              </section>
+
+              <div class="resume-footer">
+                <button class="form-btn download-cv-btn" data-modal-btn>
+                  <i class="fa-solid fa-download"></i>
+                  <span>Download CV</span>
+                </button>
+              </div>
+            </article>
+
+    <div class="modal-container" data-modal-container>
+        <div class="overlay" data-overlay></div>
+        <section class="modal dark-card">
+            <button class="modal-close-btn" data-modal-close-btn>
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-content">
+                <h3 class="h3 modal-title">Select Language</h3>
+                <p class="modal-text">Select the language of the CV you would like to download:</p>
+                <div class="modal-actions">
+                    <a href="./JoaoPauloCV_PTBR.pdf" class="form-btn modal-btn" download>Português</a>
+                    <a href="./JoaoPauloCV_ENG.pdf" class="form-btn modal-btn" download>English</a>
+                </div>
+            </div>
         </section>
+    </div>
 
-            <figure>
-                <img src="./img/foto-pessoal.jpeg" alt="Imagem de João Paulo">
-                <figcaption>João Paulo Albuquerque de Almeida Marques</figcaption>
-            </figure>
-    </main>
 
-    <footer>
-        <span>
-            &copy; 2026 João Paulo Albuquerque de Almeida Marques. Todos os direitos reservados.
-        </span>
-    </footer>
+            <!-- PORTFOLIO SECTION -->
+            <article class="portfolio" data-page="portfolio">
+              <header>
+                <h2 class="h2 article-title">Portfolio</h2>
+              </header>
+
+              <section class="projects">
+                <p class="portfolio-text">My selection of recent work and side projects.</p>
+                <ul class="project-list">
+                  
+                  <!-- Mobile Projects -->
+                  <li class="project-item">
+                    <a href="https://apps.apple.com/br/app/spark-treine-inteligente/id6747363347?l=en-GB" target="_blank" class="project-card">
+                      <figure class="project-img">
+                        <div class="project-item-icon-box">
+                          <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <img src="./img/spark.png" alt="Spark" loading="lazy">
+                      </figure>
+                      <h3 class="project-title">Spark</h3>
+                      <p class="project-category">Mobile</p>
+                    </a>
+                  </li>
+
+                  <li class="project-item">
+                    <a href="https://apps.apple.com/us/app/croak-make-the-magic/id6752270992" target="_blank" class="project-card">
+                      <figure class="project-img">
+                        <div class="project-item-icon-box">
+                          <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <img src="./img/croak.png" alt="Croak" loading="lazy">
+                      </figure>
+                      <h3 class="project-title">Croak</h3>
+                      <p class="project-category">Mobile</p>
+                    </a>
+                  </li>
+
+                  <li class="project-item">
+                    <a href="https://apps.apple.com/br/app/pitstop-gest%C3%83%C2%A3o-de-ve%C3%83%C2%ADculos/id6759846599?l=en-GB" target="_blank" class="project-card">
+                      <figure class="project-img">
+                        <div class="project-item-icon-box">
+                          <i class="fa-brands fa-github"></i>
+                        </div>
+                        <img src="./img/pitstop.jpg" alt="Pitstop" loading="lazy">
+                      </figure>
+                      <h3 class="project-title">Pitstop</h3>
+                      <p class="project-category">Mobile</p>
+                    </a>
+                  </li>
+                </ul>
+
+                <div class="separator"></div>
+
+                <ul class="project-list">
+                  <!-- Data & Automation Projects -->
+                  <li class="project-item">
+                    <a href="https://github.com/jotape12-Dev/ia-local" target="_blank" class="project-card">
+                      <figure class="project-img">
+                        <div class="project-item-icon-box">
+                          <i class="fa-brands fa-github"></i>
+                        </div>
+                        <img src="./img/ia-local.png" alt="IA Local" loading="lazy">
+                      </figure>
+                      <h3 class="project-title">IA Local</h3>
+                      <p class="project-category">Data & Automation</p>
+                    </a>
+                  </li>
+
+                  <li class="project-item">
+                    <a href="https://github.com/jotape12-Dev/mouse-virtual" target="_blank" class="project-card">
+                      <figure class="project-img">
+                        <div class="project-item-icon-box">
+                          <i class="fa-brands fa-github"></i>
+                        </div>
+                        <img src="./img/mouse-virtual.png" alt="Mouse Virtual" loading="lazy">
+                      </figure>
+                      <h3 class="project-title">Mouse Virtual</h3>
+                      <p class="project-category">Data & Automation</p>
+                    </a>
+                  </li>
+
+                  <li class="project-item">
+                    <a href="https://github.com/jotape12-Dev/organizador-arquivos" target="_blank" class="project-card">
+                      <figure class="project-img">
+                        <div class="project-item-icon-box">
+                          <i class="fa-brands fa-github"></i>
+                        </div>
+                        <img src="./img/organizador-arquivos.png" alt="Organizador de Arquivos" loading="lazy">
+                      </figure>
+                      <h3 class="project-title">Organizador de Arquivos</h3>
+                      <p class="project-category">Data & Automation</p>
+                    </a>
+                  </li>
+                </ul>
+
+                <div class="separator"></div>
+
+                <ul class="project-list">
+                  <!-- Web Projects -->
+                  <li class="project-item">
+                    <a href="https://dev-converter-opal.vercel.app" target="_blank" class="project-card">
+                      <figure class="project-img">
+                        <div class="project-item-icon-box">
+                          <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <img src="./img/dev-converter.png" alt="Dev Converter" loading="lazy">
+                      </figure>
+                      <h3 class="project-title">Dev Converter</h3>
+                      <p class="project-category">Web</p>
+                    </a>
+                  </li>
+
+                  <li class="project-item">
+                    <a href="https://my-finances.vercel.app/" target="_blank" class="project-card">
+                      <figure class="project-img">
+                        <div class="project-item-icon-box">
+                          <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <img src="./img/my-finances.png" alt="My Finances" loading="lazy">
+                      </figure>
+                      <h3 class="project-title">My Finances</h3>
+                      <p class="project-category">Web</p>
+                    </a>
+                  </li>
+
+                  <li class="project-item">
+                    <a href="https://crypto-dash-orcin.vercel.app" target="_blank" class="project-card">
+                      <figure class="project-img">
+                        <div class="project-item-icon-box">
+                          <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <img src="./img/crypto-dash.png" alt="Crypto Dash" loading="lazy">
+                      </figure>
+                      <h3 class="project-title">Crypto Dash</h3>
+                      <p class="project-category">Web</p>
+                    </a>
+                  </li>
+                </ul>
+              </section>
+            </article>
+
+        </main>
+    </div>
+
+    <script>
+      // Navigation functionality
+      const navigationLinks = document.querySelectorAll("[data-nav-link]");
+      const pages = document.querySelectorAll("[data-page]");
+
+      navigationLinks.forEach(link => {
+        link.addEventListener("click", function() {
+          const targetPage = this.getAttribute("data-nav-link");
+          
+          pages.forEach(page => {
+            if(page.getAttribute("data-page") === targetPage) {
+              page.classList.add("active");
+              link.classList.add("active");
+            } else {
+              page.classList.remove("active");
+              // find the corresponding link
+              const otherLink = document.querySelector(`[data-nav-link="${page.getAttribute("data-page")}"]`);
+              if(otherLink) otherLink.classList.remove("active");
+            }
+          });
+          window.scrollTo(0, 0);
+        });
+      });
+
+      // Mobile sidebar toggle
+      const sidebarBtn = document.querySelector("[data-sidebar-btn]");
+      const sidebar = document.querySelector("[data-sidebar]");
+      if(sidebarBtn) {
+        sidebarBtn.addEventListener("click", () => {
+          sidebar.classList.toggle("active");
+        });
+      }
+
+      // Contact form validation
+      const form = document.querySelector("[data-form]");
+      const formInputs = document.querySelectorAll("[data-form-input]");
+      const formBtn = document.querySelector("[data-form-btn]");
+
+      if(form) {
+        formInputs.forEach(input => {
+          input.addEventListener("input", () => {
+            if(form.checkValidity()) {
+              formBtn.removeAttribute("disabled");
+            } else {
+              formBtn.setAttribute("disabled", "");
+            }
+          });
+        });
+      }
+
+      // Modal toggle functionality
+      const modalBtn = document.querySelector("[data-modal-btn]");
+      const modalContainer = document.querySelector("[data-modal-container]");
+      const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
+      const overlay = document.querySelector("[data-overlay]");
+
+      const toggleModal = function () {
+        modalContainer.classList.toggle("active");
+      }
+
+      if (modalBtn) modalBtn.addEventListener("click", toggleModal);
+      if (modalCloseBtn) modalCloseBtn.addEventListener("click", toggleModal);
+      if (overlay) overlay.addEventListener("click", toggleModal);
+    </script>
 </body>
 </html>

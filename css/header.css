@@ -1,32 +1,38 @@
-header{
-    background-color: #222;
-    padding: 25px;
+/* header.css - Repurposed as Navbar */
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.navbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--nav-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-left: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  padding: 20px 40px;
+  z-index: 10;
 }
 
-header h1{
-    font-size: 2.8em;
-    font-weight: 200;
-
+.navbar-list {
+  display: flex;
+  gap: 30px;
 }
 
-header nav{
-    display: flex;
-    align-items: center;
+.navbar-link {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
 }
 
-header nav a{
-    font-size: 1.5em;
-    margin-right: 1.3em;
-}
-
-header h1, a{
-    color: #00e0ff;
-}
-
-header a:hover{
-    color: #fff;
+.navbar-link:hover,
+.navbar-link.active {
+  color: var(--primary-accent);
 }
