@@ -52,7 +52,7 @@ Included in this portfolio are several of my recent works across multiple stacks
 - **Organizador de Arquivos**: Automated data manipulation scripts.
 
 ### 💻 Web Applications
-- **Dev Converter**: Web-based developer tools.
+- **LapidaAI**: CV analyser
 - **My Finances**: Personal finance tracker.
 - **Crypto Dash**: Cryptocurrency dashboard.
 
