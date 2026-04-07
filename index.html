@@ -1,455 +1,587 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg+xml" href="https://github.com/favicon.ico" />
-    <title>João Paulo - Full Stack Developer</title>
-
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/responsive.css">
-
+    <title>João Paulo Portfolio | Software Developer</title>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a0881829cd.js" crossorigin="anonymous" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="app-container">
-        <!-- SIDEBAR -->
-        <aside class="sidebar dark-card" data-sidebar>
-            <div class="sidebar-info">
-                <figure class="avatar-box">
-                    <img src="./img/foto-pessoal.jpeg" alt="João Paulo">
-                </figure>
-                <div class="info-content">
-                    <h1 class="name" title="João Paulo">João Paulo</h1>
-                    <p class="title">Full Stack Developer</p>
-                </div>
-                <button class="info_more-btn" data-sidebar-btn>
-                  <span>Show Contacts</span>
-                  <i class="fa-solid fa-chevron-down"></i>
-                </button>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+
+    <!-- Floating Particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-icon">&#10006;</span>
+                <span class="logo-text"><span class="logo-highlight">J</span>OÃO PAULO</span>
+            </a>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active" data-section="home">Home</a>
+                <a href="#about" class="nav-link" data-section="about">About</a>
+                <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+                <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section class="section hero-section" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="typing-text"></span><span class="typing-cursor">|</span>
+            </h1>
+            <p class="hero-subtitle">
+                Software Developer focused on native iOS and Android apps, with experience in Swift, Kotlin, Flutter, and React Native — forging digital experiences with precision and creativity.
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">
+                    View My Work <i class="fa fa-arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    Contact Me
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <i class="fa fa-arrow-down"></i>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills-section" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title-decorative">Skilled In</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">From pixel-perfect designs to scalable architectures, my development style is a crafted blend of artistry and engineering. These are the techniques I wield.</p>
             </div>
 
-            <div class="sidebar-info_more">
-              <div class="separator"></div>
-
-              <div class="sidebar-contacts">
-                  <ul class="contacts-list">
-                      <li class="contact-item">
-                          <div class="icon-box">
-                              <i class="fa-regular fa-envelope"></i>
-                          </div>
-                          <div class="contact-info">
-                              <p class="contact-title">Email</p>
-                              <a href="mailto:joaopauloalbuquerque606@gmail.com" class="contact-link" title="joaopauloalbuquerque606@gmail.com">joaopauloalbuquerque606@gmail.com</a>
-                          </div>
-                      </li>
-                      <li class="contact-item">
-                          <div class="icon-box">
-                              <i class="fa-solid fa-mobile-screen"></i>
-                          </div>
-                          <div class="contact-info">
-                              <p class="contact-title">Phone</p>
-                              <a href="tel:+5561991995261" class="contact-link">+55 (61) 99199-5261</a>
-                          </div>
-                      </li>
-                      <li class="contact-item">
-                          <div class="icon-box">
-                              <i class="fa-solid fa-location-dot"></i>
-                          </div>
-                          <div class="contact-info">
-                              <p class="contact-title">Location</p>
-                              <address>Brasília, Brazil</address>
-                          </div>
-                      </li>
-                  </ul>
-              </div>
-
-              <div class="separator"></div>
-
-              <ul class="social-list">
-                  <li class="social-item">
-                      <a href="https://github.com/jotape12-Dev" class="social-link" target="_blank">
-                          <i class="fa-brands fa-github"></i>
-                      </a>
-                  </li>
-                  <li class="social-item">
-                      <a href="http://www.linkedin.com/in/joao-paulo-albuquerque-de-almeida-marques-2a6b6b2a8" class="social-link" target="_blank">
-                          <i class="fa-brands fa-linkedin"></i>
-                      </a>
-                  </li>
-                  <li class="social-item">
-                      <a href="https://www.instagram.com/_.jotape__/" class="social-link" target="_blank">
-                          <i class="fa-brands fa-instagram"></i>
-                      </a>
-                  </li>
-              </ul>
-            </div>
-        </aside>
-
-        <!-- MAIN CONTENT -->
-        <main class="main-content dark-card">
-            <!-- NAVBAR -->
-            <nav class="navbar">
-                <ul class="navbar-list">
-                    <li class="navbar-item"><button class="navbar-link active" data-nav-link="about">About</button></li>
-                    <li class="navbar-item"><button class="navbar-link" data-nav-link="resume">Resume</button></li>
-                    <li class="navbar-item"><button class="navbar-link" data-nav-link="portfolio">Portfolio</button></li>
-                </ul>
-            </nav>
-
-            <!-- ABOUT SECTION -->
-            <article class="about active" data-page="about">
-                <header>
-                    <h2 class="h2 article-title">About Me</h2>
-                </header>
-                <section class="about-text">
-                    <p>
-                        Hello! My name is João Paulo Albuquerque de Almeida Marques. I'm 20 years old, from Brasília, Brazil, and I'm a full stack developer. Currently studying Computer Science at the Catholic University of Brasília (UCB), I am always looking for new challenges and opportunities to grow professionally.
-                    </p>
-                    <p>
-                        I currently work with technologies like Swift, Node.js, React. My passion is to create innovative and efficient solutions for real-world problems.
-                    </p>
-                </section>
-
-                <!-- SERVICES / TECHS -->
-                <section class="services">
-                    <h3 class="h3 service-title">What I'm Doing</h3>
-                    <ul class="service-list">
-                        <li class="service-item">
-                            <div class="service-icon-box">
-                                <img src="./img/techs/react-logo.png" alt="React" width="40">
-                            </div>
-                            <div class="service-content-box">
-                                <h4 class="h4 item-title">Front-End Development</h4>
-                                <p class="service-item-text">
-                                    Building modern and reactive web interfaces using React, HTML, CSS, and JavaScript.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="service-item">
-                            <div class="service-icon-box">
-                                <img src="./img/techs/node-logo.png" alt="Node.js" width="40">
-                            </div>
-                            <div class="service-content-box">
-                                <h4 class="h4 item-title">Back-End Development</h4>
-                                <p class="service-item-text">
-                                    Building robust and scalable APIs using Node.js, Python, Java, and Docker for orchestration.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="service-item">
-                            <div class="service-icon-box">
-                                <img src="./img/techs/swift-logo.png" alt="Swift" width="40">
-                            </div>
-                            <div class="service-content-box">
-                                <h4 class="h4 item-title">Mobile Development</h4>
-                                <p class="service-item-text">
-                                    Developing native applications for the iOS ecosystem using Swift.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="service-item">
-                            <div class="service-icon-box">
-                                <img src="./img/techs/python-logo.webp" alt="Python" width="40">
-                            </div>
-                            <div class="service-content-box">
-                                <h4 class="h4 item-title">Data & Automation</h4>
-                                <p class="service-item-text">
-                                    Creating scripts, automations, and data manipulation using Python.
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
-                </section>
-
-                </section>
-            </article>
-
-            <!-- RESUME SECTION -->
-            <article class="resume" data-page="resume">
-              <header>
-                <h2 class="h2 article-title">Resume</h2>
-              </header>
-
-              <section class="timeline">
-                <div class="title-wrapper">
-                  <div class="icon-box">
-                    <i class="fa-solid fa-book-open"></i>
-                  </div>
-                  <h3 class="h3">Education</h3>
+            <div class="skills-categories">
+                <div class="skill-category">
+                    <h3 class="category-title"><span class="category-icon">🍎</span> iOS & Android Native</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg" alt="Swift" class="skill-icon"> Swift</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg" alt="SwiftUI" class="skill-icon"> SwiftUI</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg" alt="UIKit" class="skill-icon"> UIKit</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg" alt="SwiftData" class="skill-icon"> SwiftData</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg" alt="CoreML" class="skill-icon"> CoreML</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin" class="skill-icon"> Kotlin</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="skill-icon"> Java</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg" alt="Android" class="skill-icon"> Android Jetpack</span>
+                    </div>
                 </div>
-                <ol class="timeline-list">
-                  <li class="timeline-item">
-                    <h4 class="h4 timeline-item-title">Catholic University of Brasília (UCB)</h4>
-                    <span>2024 — Present</span>
-                    <p class="timeline-text">
-                      Student of Computer Science, focusing on full stack development and mobile technologies.
-                    </p>
-                  </li>
-                </ol>
-              </section>
 
-              <section class="timeline">
-                <div class="title-wrapper">
-                  <div class="icon-box">
-                    <i class="fa-solid fa-briefcase"></i>
-                  </div>
-                  <h3 class="h3">Experience</h3>
+                <div class="skill-category">
+                    <h3 class="category-title"><span class="category-icon">🌐</span> Cross-Platform & Web</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" class="skill-icon"> Flutter</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Native" class="skill-icon"> React Native</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" class="skill-icon"> TypeScript</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="skill-icon"> React</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="skill-icon"> HTML5</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="skill-icon"> CSS3</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind" class="skill-icon"> Tailwind</span>
+                    </div>
                 </div>
-                <ol class="timeline-list">
-                  <li class="timeline-item">
-                    <h4 class="h4 timeline-item-title">Apple Developer Academy</h4>
-                    <span>2025 — Present</span>
-                    <p class="timeline-text">
-                        Implemented REST API integrations, gesture recognition using Vision Framework, and complex data persistence
-                        with SwiftData/CoreData. Collaborated in cross-functional agile teams (designers and developers) following Scrum practices,
-                        participating in sprint planning, reviews, and code reviews. Solved real-world challenges using Challenge Based Learning (CBL) methodology, from research and ideation
-                        to product delivery and App Store publication.
-                    </p>
-                  </li>
-                </ol>
-              </section>
 
-              </section>
+                <div class="skill-category">
+                    <h3 class="category-title"><span class="category-icon">🏗️</span> Arquitetura & Design Patterns</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">⚡ MVVM</span>
+                        <span class="skill-tag">🔷 MVP</span>
+                        <span class="skill-tag">🐍 VIPER</span>
+                        <span class="skill-tag">🧱 Clean Architecture</span>
+                        <span class="skill-tag">📦 Repository Pattern</span>
+                        <span class="skill-tag">🔄 RxJava</span>
+                    </div>
+                </div>
 
-              <div class="resume-footer">
-                <button class="form-btn download-cv-btn" data-modal-btn>
-                  <i class="fa-solid fa-download"></i>
-                  <span>Download CV</span>
-                </button>
-              </div>
-            </article>
+                <div class="skill-category">
+                    <h3 class="category-title"><span class="category-icon">🗄️</span> Backend & Banco de Dados</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" class="skill-icon"> Node.js</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" alt="Supabase" class="skill-icon"> Supabase</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" class="skill-icon"> Firebase</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="skill-icon"> MySQL</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="SQL Server" class="skill-icon"> SQL Server</span>
+                    </div>
+                </div>
 
-    <div class="modal-container" data-modal-container>
-        <div class="overlay" data-overlay></div>
-        <section class="modal dark-card">
-            <button class="modal-close-btn" data-modal-close-btn>
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-            <div class="modal-content">
-                <h3 class="h3 modal-title">Select Language</h3>
-                <p class="modal-text">Select the language of the CV you would like to download:</p>
-                <div class="modal-actions">
-                    <a href="./JoaoPauloCV_PTBR.pdf" class="form-btn modal-btn" download>Português</a>
-                    <a href="./JoaoPauloCV_ENG.pdf" class="form-btn modal-btn" download>English</a>
+                <div class="skill-category">
+                    <h3 class="category-title"><span class="category-icon">🚀</span> Ferramentas & DevOps</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xcode/xcode-original.svg" alt="Xcode" class="skill-icon"> Xcode</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg" alt="Android Studio" class="skill-icon"> Android Studio</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="skill-icon"> GitHub Actions</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" class="skill-icon"> Figma</span>
+                        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" alt="Jira" class="skill-icon"> Jira</span>
+                        <span class="skill-tag">🚀 Fastlane</span>
+                    </div>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-card">
+                <h2 class="cta-title">Ready to <span class="text-accent">Ignite</span> Your Next Project?</h2>
+                <p class="cta-text">Let's collaborate and bring your vision to life with precision, creativity, and cutting-edge technology.</p>
+                <a href="#contact" class="btn btn-primary">Get in Touch</a>
+            </div>
+        </div>
+    </section>
 
-            <!-- PORTFOLIO SECTION -->
-            <article class="portfolio" data-page="portfolio">
-              <header>
-                <h2 class="h2 article-title">Portfolio</h2>
-              </header>
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title-decorative">Character Profile</h2>
+                <div class="title-underline"></div>
+            </div>
 
-              <section class="projects">
-                <p class="portfolio-text">My selection of recent work and side projects.</p>
-                <ul class="project-list">
-                  
-                  <!-- Mobile Projects -->
-                  <li class="project-item">
-                    <a href="https://apps.apple.com/br/app/spark-treine-inteligente/id6747363347?l=en-GB" target="_blank" class="project-card">
-                      <figure class="project-img">
-                        <div class="project-item-icon-box">
-                          <i class="fa-solid fa-eye"></i>
+            <div class="about-content">
+                <h3 class="about-headline">
+                    <span class="text-accent">Software Developer</span> focused on native iOS and Android apps, forging digital experiences with precision and creativity.
+                </h3>
+
+                <div class="about-paragraphs">
+                    <p>Specialized in Swift/SwiftUI for iOS and Kotlin/Java for Android, with expertise in MVVM, Clean Architecture and VIPER patterns. Hands-on experience integrating REST APIs, data persistence with SwiftData and Room, and mobile security best practices (Keychain, SSL Pinning).</p>
+                    <p>At the Apple Developer Academy, I lead the conception and publication of apps on the App Store with an average rating of 4.8 stars, collaborating in multidisciplinary squads under CBL/Scrum methodology and delivering 100% of sprints on time.</p>
+                    <p>Beyond native mobile, I build cross-platform apps with Flutter and React Native, and have experience in web development with React, TypeScript and Tailwind — always seeking to master new forms of development.</p>
+                </div>
+
+                <div class="about-cards">
+                    <div class="about-card">
+                        <div class="about-card-icon"><i class="fa fa-mobile-screen-button"></i></div>
+                        <h4>Technical Skills</h4>
+                        <p>Swift, SwiftUI, Kotlin, Flutter, React Native, TypeScript, React, Node.js</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-card-icon"><i class="fa fa-medal"></i></div>
+                        <h4>Specialties</h4>
+                        <p>iOS & Android Native, MVVM/Clean Architecture, Cross-Platform, App Store Publishing</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Journey & Experience -->
+            <div class="section-header" style="margin-top: 80px;">
+                <h2 class="section-title-decorative">Journey & Experience</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">My path as a developer, forged through dedication and continuous growth.</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item timeline-left">
+                    <div class="timeline-content">
+                        <h4>Software Engineering</h4>
+                        <span class="timeline-company">Catholic University of Brasília (UCB)</span> <span class="timeline-date">2024 - Present</span>
+                        <p>Bachelor's degree in Software Engineering. Extension courses in Software Architecture and Clean Code in Swift, Flutter & Dart Masterclass (BLoC/Clean Architecture), React & Next.js with Tailwind, and UI/UX Design for Developers.</p>
+                    </div>
+                    <div class="timeline-icon"><i class="fa fa-graduation-cap"></i></div>
+                </div>
+
+                <div class="timeline-item timeline-right">
+                    <div class="timeline-icon"><i class="fa fa-laptop-code"></i></div>
+                    <div class="timeline-content">
+                        <h4>Mobile Developer — Freelancer</h4>
+                        <span class="timeline-company">Self-employed</span> <span class="timeline-date">2024 - Present</span>
+                        <p>Building native and cross-platform mobile apps for clients. Full-cycle delivery with Swift, Flutter and React Native, from design to store publication.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item timeline-left">
+                    <div class="timeline-content">
+                        <h4>iOS Developer — Apple Developer Academy</h4>
+                        <span class="timeline-company">Apple | UCB</span> <span class="timeline-date">Feb 2025 - Present</span>
+                        <p>REST API integration with Vision Framework (–30% response time), MVVM and Clean Architecture in team projects. Mobile security with Keychain and SSL Pinning, performance profiling with Instruments. Apps published on the App Store averaging 4.8 stars and +200 downloads in the first month.</p>
+                    </div>
+                    <div class="timeline-icon"><i class="fa-brands fa-apple"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects-section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title-decorative">Dev Projects</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Discover my projects, each crafted with precision and attention to detail — like the futuristic art of Development.</p>
+            </div>
+
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="swift">Swift / iOS</button>
+                <button class="filter-btn" data-filter="flutter">Flutter</button>
+                <button class="filter-btn" data-filter="react-native">React Native</button>
+                <button class="filter-btn" data-filter="react">React / Web</button>
+                <button class="filter-btn" data-filter="python">Python</button>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Mobile Projects -->
+                <div class="project-card" data-category="swift">
+                    <div class="project-card-top project-card-img">
+                        <span class="project-lang"><span class="lang-dot" style="background: #F05138;"></span> Swift</span>
+                        <img src="images/spark.png" alt="Spark App" class="project-thumb" onerror="this.parentElement.classList.remove('project-card-img'); this.style.display='none'; this.parentElement.querySelector('.project-icon-fallback').style.display='flex';">
+                        <div class="project-icon-fallback"><i class="fa fa-mobile-screen-button"></i></div>
+                    </div>
+                    <div class="project-card-bottom">
+                        <h4>Spark — Workout App</h4>
+                        <p>SwiftUI app with MVVM architecture and complete local persistence. 150+ downloads in 30 days, 5-star rating on the App Store.</p>
+                        <div class="project-stats">
+                            <span><i class="fa fa-star"></i> 5.0</span>
+                            <span><i class="fa fa-download"></i> +150</span>
                         </div>
-                        <img src="./img/spark.png" alt="Spark" loading="lazy">
-                      </figure>
-                      <h3 class="project-title">Spark</h3>
-                      <p class="project-category">Mobile</p>
-                    </a>
-                  </li>
-
-                  <li class="project-item">
-                    <a href="https://apps.apple.com/us/app/croak-make-the-magic/id6752270992" target="_blank" class="project-card">
-                      <figure class="project-img">
-                        <div class="project-item-icon-box">
-                          <i class="fa-solid fa-eye"></i>
+                        <div class="project-buttons">
+                            <a href="https://apps.apple.com/br/app/spark-treine-inteligente/id6747363347?l=en-GB" target="_blank" class="btn-live"><i class="fa-brands fa-app-store-ios"></i> App Store</a>
                         </div>
-                        <img src="./img/croak.png" alt="Croak" loading="lazy">
-                      </figure>
-                      <h3 class="project-title">Croak</h3>
-                      <p class="project-category">Mobile</p>
-                    </a>
-                  </li>
+                    </div>
+                </div>
 
-                  <li class="project-item">
-                    <a href="https://apps.apple.com/br/app/pitstop-gest%C3%83%C2%A3o-de-ve%C3%83%C2%ADculos/id6759846599?l=en-GB" target="_blank" class="project-card">
-                      <figure class="project-img">
-                        <div class="project-item-icon-box">
-                          <i class="fa-solid fa-eye"></i>
+                <div class="project-card" data-category="swift">
+                    <div class="project-card-top project-card-img">
+                        <span class="project-lang"><span class="lang-dot" style="background: #F05138;"></span> Swift</span>
+                        <img src="images/croak.png" alt="Croak App" class="project-thumb" onerror="this.parentElement.classList.remove('project-card-img'); this.style.display='none'; this.parentElement.querySelector('.project-icon-fallback').style.display='flex';">
+                        <div class="project-icon-fallback"><i class="fa fa-mobile-screen-button"></i></div>
+                    </div>
+                    <div class="project-card-bottom">
+                        <h4>Croak — Machine Learning Game</h4>
+                        <p>iOS game using Vision and CoreML for real-time gesture recognition under 100ms latency. Published on the App Store with a 5-star rating.</p>
+                        <div class="project-stats">
+                            <span><i class="fa fa-star"></i> 5.0</span>
+                            <span><i class="fa fa-brain"></i> CoreML</span>
                         </div>
-                        <img src="./img/pitstop.jpg" alt="Pitstop" loading="lazy">
-                      </figure>
-                      <h3 class="project-title">Pitstop</h3>
-                      <p class="project-category">Mobile</p>
-                    </a>
-                  </li>
-                </ul>
-
-                <div class="separator"></div>
-
-                <ul class="project-list">
-                  <!-- Data & Automation Projects -->
-                  <li class="project-item">
-                    <a href="https://github.com/jotape12-Dev/ia-local" target="_blank" class="project-card">
-                      <figure class="project-img">
-                        <div class="project-item-icon-box">
-                          <i class="fa-brands fa-github"></i>
+                        <div class="project-buttons">
+                            <a href="https://apps.apple.com/us/app/croak-make-the-magic/id6752270992" target="_blank" class="btn-live"><i class="fa-brands fa-app-store-ios"></i> App Store</a>
                         </div>
-                        <img src="./img/ia-local.png" alt="IA Local" loading="lazy">
-                      </figure>
-                      <h3 class="project-title">IA Local</h3>
-                      <p class="project-category">Data & Automation</p>
-                    </a>
-                  </li>
+                    </div>
+                </div>
 
-                  <li class="project-item">
-                    <a href="https://github.com/jotape12-Dev/mouse-virtual" target="_blank" class="project-card">
-                      <figure class="project-img">
-                        <div class="project-item-icon-box">
-                          <i class="fa-brands fa-github"></i>
+                <div class="project-card" data-category="swift">
+                    <div class="project-card-top project-card-img">
+                        <span class="project-lang"><span class="lang-dot" style="background: #F05138;"></span> Swift</span>
+                        <img src="images/pitstop.jpg" alt="Pitstop App" class="project-thumb" onerror="this.parentElement.classList.remove('project-card-img'); this.style.display='none'; this.parentElement.querySelector('.project-icon-fallback').style.display='flex';">
+                        <div class="project-icon-fallback"><i class="fa fa-mobile-screen-button"></i></div>
+                    </div>
+                    <div class="project-card-bottom">
+                        <h4>Pitstop — Fleet Manager</h4>
+                        <p>Complete fleet and vehicle management system for iOS built with CoreData, MVVM architecture and a responsive SwiftUI interface.</p>
+                        <div class="project-stats">
+                            <span><i class="fa fa-star"></i> iOS</span>
+                            <span><i class="fa fa-car"></i> CoreData</span>
                         </div>
-                        <img src="./img/mouse-virtual.png" alt="Mouse Virtual" loading="lazy">
-                      </figure>
-                      <h3 class="project-title">Mouse Virtual</h3>
-                      <p class="project-category">Data & Automation</p>
-                    </a>
-                  </li>
-
-                  <li class="project-item">
-                    <a href="https://github.com/jotape12-Dev/organizador-arquivos" target="_blank" class="project-card">
-                      <figure class="project-img">
-                        <div class="project-item-icon-box">
-                          <i class="fa-brands fa-github"></i>
+                        <div class="project-buttons">
+                            <a href="https://apps.apple.com/br/app/pitstop-gest%C3%A3o-de-ve%C3%ADculos/id6759846599?l=en-GB" target="_blank" class="btn-live"><i class="fa-brands fa-app-store-ios"></i> App Store</a>
                         </div>
-                        <img src="./img/organizador-arquivos.png" alt="Organizador de Arquivos" loading="lazy">
-                      </figure>
-                      <h3 class="project-title">Organizador de Arquivos</h3>
-                      <p class="project-category">Data & Automation</p>
-                    </a>
-                  </li>
-                </ul>
+                    </div>
+                </div>
 
-                <div class="separator"></div>
-
-                <ul class="project-list">
-                  <!-- Web Projects -->
-                  <li class="project-item">
-                    <a href="https://analisador-curriculos-a74g.vercel.app/" target="_blank" class="project-card">
-                      <figure class="project-img">
-                        <div class="project-item-icon-box">
-                          <i class="fa-solid fa-eye"></i>
+                <div class="project-card" data-category="swift">
+                    <div class="project-card-top project-card-img">
+                        <span class="project-lang"><span class="lang-dot" style="background: #F05138;"></span> Swift</span>
+                        <img src="images/lapidaai.jpg" alt="LapidaAI App" class="project-thumb" onerror="this.parentElement.classList.remove('project-card-img'); this.style.display='none'; this.parentElement.querySelector('.project-icon-fallback').style.display='flex';">
+                        <div class="project-icon-fallback"><i class="fa fa-mobile-screen-button"></i></div>
+                    </div>
+                    <div class="project-card-bottom">
+                        <h4>LapidaAI — Resume Analyzer</h4>
+                        <p>iOS app for AI-powered resume analysis built in SwiftUI with Apple Sign-In authentication and in-app purchases via StoreKit 2 (IAP).</p>
+                        <div class="project-stats">
+                            <span><i class="fa fa-star"></i> iOS</span>
+                            <span><i class="fa fa-robot"></i> AI + IAP</span>
                         </div>
-                        <img src="./img/lapidaAI.png" alt="Lapida AI" loading="lazy">
-                      </figure>
-                      <h3 class="project-title">Lapida AI</h3>
-                      <p class="project-category">Web</p>
-                    </a>
-                  </li>
-
-                  <li class="project-item">
-                    <a href="https://my-finances.vercel.app/" target="_blank" class="project-card">
-                      <figure class="project-img">
-                        <div class="project-item-icon-box">
-                          <i class="fa-solid fa-eye"></i>
+                        <div class="project-buttons">
+                            <a href="https://apps.apple.com/br/app/lapidaai/id6761161953?l=en-GB" target="_blank" class="btn-live"><i class="fa-brands fa-app-store-ios"></i> App Store</a>
                         </div>
-                        <img src="./img/my-finances.png" alt="My Finances" loading="lazy">
-                      </figure>
-                      <h3 class="project-title">My Finances</h3>
-                      <p class="project-category">Web</p>
-                    </a>
-                  </li>
+                    </div>
+                </div>
 
-                  <li class="project-item">
-                    <a href="https://crypto-dash-orcin.vercel.app" target="_blank" class="project-card">
-                      <figure class="project-img">
-                        <div class="project-item-icon-box">
-                          <i class="fa-solid fa-eye"></i>
+                <!-- React Native Projects -->
+                <div class="project-card" data-category="react-native">
+                    <div class="project-card-top project-card-img">
+                        <span class="project-lang"><span class="lang-dot" style="background: #61DAFB;"></span> React Native</span>
+                        <img src="images/memora.jpeg" alt="Memora App" class="project-thumb" onerror="this.parentElement.classList.remove('project-card-img'); this.style.display='none'; this.parentElement.querySelector('.project-icon-fallback').style.display='flex';">
+                        <div class="project-icon-fallback"><i class="fa fa-brain"></i></div>
+                    </div>
+                    <div class="project-card-bottom">
+                        <h4>Memora — Smart Flashcards</h4>
+                        <p>Flashcard app with AI-powered automatic card generation (Mistral-7B / GPT-4o-mini), SM-2 spaced repetition algorithm, OCR via ML Kit, freemium model with RevenueCat and Supabase backend.</p>
+                        <div class="project-stats">
+                            <span><i class="fa fa-robot"></i> AI</span>
+                            <span><i class="fa fa-mobile-screen-button"></i> Expo</span>
                         </div>
-                        <img src="./img/crypto-dash.png" alt="Crypto Dash" loading="lazy">
-                      </figure>
-                      <h3 class="project-title">Crypto Dash</h3>
-                      <p class="project-category">Web</p>
-                    </a>
-                  </li>
-                </ul>
-              </section>
-            </article>
+                        <div class="project-buttons">
+                            <a href="https://github.com/jotape12-Dev" target="_blank" class="btn-repo"><i class="fa-brands fa-github"></i> Repositório</a>
+                        </div>
+                    </div>
+                </div>
 
-        </main>
-    </div>
+                <!-- Flutter Projects -->
+                <div class="project-card" data-category="flutter">
+                    <div class="project-card-top project-card-img">
+                        <span class="project-lang"><span class="lang-dot" style="background: #54C5F8;"></span> Flutter</span>
+                        <img src="images/axion.jpg" alt="Axion App" class="project-thumb" onerror="this.parentElement.classList.remove('project-card-img'); this.style.display='none'; this.parentElement.querySelector('.project-icon-fallback').style.display='flex';">
+                        <div class="project-icon-fallback"><i class="fa fa-bolt"></i></div>
+                    </div>
+                    <div class="project-card-bottom">
+                        <h4>Axion — AI Quiz App</h4>
+                        <p>Cross-platform quiz app built in Flutter/Dart with AI-generated questions, typewriter animation, question count selector and performance reports. Serverless backend with Supabase.</p>
+                        <div class="project-stats">
+                            <span><i class="fa fa-robot"></i> AI</span>
+                            <span><i class="fa fa-layer-group"></i> Supabase</span>
+                        </div>
+                        <div class="project-buttons">
+                            <a href="https://github.com/jotape12-Dev" target="_blank" class="btn-repo"><i class="fa-brands fa-github"></i> Repositório</a>
+                        </div>
+                    </div>
+                </div>
 
-    <script>
-      // Navigation functionality
-      const navigationLinks = document.querySelectorAll("[data-nav-link]");
-      const pages = document.querySelectorAll("[data-page]");
+                <!-- Web Projects -->
+                <div class="project-card" data-category="react">
+                    <div class="project-card-top">
+                        <span class="project-lang"><span class="lang-dot" style="background: #61DAFB;"></span> React</span>
+                        <div class="project-icon-large"><i class="fa fa-code"></i></div>
+                    </div>
+                    <div class="project-card-bottom">
+                        <h4>My Finances</h4>
+                        <p>Personal finance tracker web app built with React and CSS.</p>
+                        <div class="project-stats">
+                            <span><i class="fa fa-code"></i> React</span>
+                            <span><i class="fa fa-globe"></i> Web</span>
+                        </div>
+                        <div class="project-buttons">
+                            <a href="https://github.com/jotape12-Dev" target="_blank" class="btn-repo"><i class="fa-brands fa-github"></i> Repository</a>
+                            <a href="https://my-finances.vercel.app/" target="_blank" class="btn-live"><i class="fa fa-arrow-up-right-from-square"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
 
-      navigationLinks.forEach(link => {
-        link.addEventListener("click", function() {
-          const targetPage = this.getAttribute("data-nav-link");
-          
-          pages.forEach(page => {
-            if(page.getAttribute("data-page") === targetPage) {
-              page.classList.add("active");
-              link.classList.add("active");
-            } else {
-              page.classList.remove("active");
-              // find the corresponding link
-              const otherLink = document.querySelector(`[data-nav-link="${page.getAttribute("data-page")}"]`);
-              if(otherLink) otherLink.classList.remove("active");
-            }
-          });
-          window.scrollTo(0, 0);
-        });
-      });
+                <div class="project-card" data-category="react">
+                    <div class="project-card-top">
+                        <span class="project-lang"><span class="lang-dot" style="background: #61DAFB;"></span> React</span>
+                        <div class="project-icon-large"><i class="fa fa-robot"></i></div>
+                    </div>
+                    <div class="project-card-bottom">
+                        <h4>Lapida AI — Web</h4>
+                        <p>AI-powered resume analyzer web app built with React and Node.js.</p>
+                        <div class="project-stats">
+                            <span><i class="fa fa-robot"></i> AI</span>
+                            <span><i class="fa fa-globe"></i> Web</span>
+                        </div>
+                        <div class="project-buttons">
+                            <a href="https://github.com/jotape12-Dev" target="_blank" class="btn-repo"><i class="fa-brands fa-github"></i> Repository</a>
+                            <a href="https://analisador-curriculos-a74g.vercel.app/" target="_blank" class="btn-live"><i class="fa fa-arrow-up-right-from-square"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
 
-      // Mobile sidebar toggle
-      const sidebarBtn = document.querySelector("[data-sidebar-btn]");
-      const sidebar = document.querySelector("[data-sidebar]");
-      if(sidebarBtn) {
-        sidebarBtn.addEventListener("click", () => {
-          sidebar.classList.toggle("active");
-        });
-      }
+                <div class="project-card" data-category="react">
+                    <div class="project-card-top">
+                        <span class="project-lang"><span class="lang-dot" style="background: #F7DF1E;"></span> JavaScript</span>
+                        <div class="project-icon-large"><i class="fa fa-chart-line"></i></div>
+                    </div>
+                    <div class="project-card-bottom">
+                        <h4>Crypto Dash</h4>
+                        <p>Cryptocurrency dashboard with live data fetched from a public API.</p>
+                        <div class="project-stats">
+                            <span><i class="fa fa-code"></i> JavaScript</span>
+                            <span><i class="fa fa-globe"></i> Web</span>
+                        </div>
+                        <div class="project-buttons">
+                            <a href="https://github.com/jotape12-Dev" target="_blank" class="btn-repo"><i class="fa-brands fa-github"></i> Repository</a>
+                            <a href="https://crypto-dash-orcin.vercel.app" target="_blank" class="btn-live"><i class="fa fa-arrow-up-right-from-square"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
 
-      // Contact form validation
-      const form = document.querySelector("[data-form]");
-      const formInputs = document.querySelectorAll("[data-form-input]");
-      const formBtn = document.querySelector("[data-form-btn]");
+                <!-- Python Projects -->
+                <div class="project-card" data-category="python">
+                    <div class="project-card-top">
+                        <span class="project-lang"><span class="lang-dot" style="background: #3776AB;"></span> Python</span>
+                        <div class="project-icon-large"><i class="fa fa-robot"></i></div>
+                    </div>
+                    <div class="project-card-bottom">
+                        <h4>IA Local</h4>
+                        <p>Locally hosted AI solution running language models entirely on-device without internet connection.</p>
+                        <div class="project-stats">
+                            <span><i class="fa fa-robot"></i> AI</span>
+                            <span><i class="fa fa-server"></i> Local</span>
+                        </div>
+                        <div class="project-buttons">
+                            <a href="https://github.com/jotape12-Dev/ia-local" target="_blank" class="btn-repo"><i class="fa-brands fa-github"></i> Repository</a>
+                        </div>
+                    </div>
+                </div>
 
-      if(form) {
-        formInputs.forEach(input => {
-          input.addEventListener("input", () => {
-            if(form.checkValidity()) {
-              formBtn.removeAttribute("disabled");
-            } else {
-              formBtn.setAttribute("disabled", "");
-            }
-          });
-        });
-      }
+                <div class="project-card" data-category="python">
+                    <div class="project-card-top">
+                        <span class="project-lang"><span class="lang-dot" style="background: #3776AB;"></span> Python</span>
+                        <div class="project-icon-large"><i class="fa fa-computer-mouse"></i></div>
+                    </div>
+                    <div class="project-card-bottom">
+                        <h4>Virtual Mouse</h4>
+                        <p>Hands-free mouse control using computer vision to track hand gestures via webcam in real time.</p>
+                        <div class="project-stats">
+                            <span><i class="fa fa-eye"></i> CV</span>
+                            <span><i class="fa fa-hand"></i> Gesture</span>
+                        </div>
+                        <div class="project-buttons">
+                            <a href="https://github.com/jotape12-Dev/mouse-virtual" target="_blank" class="btn-repo"><i class="fa-brands fa-github"></i> Repository</a>
+                        </div>
+                    </div>
+                </div>
 
-      // Modal toggle functionality
-      const modalBtn = document.querySelector("[data-modal-btn]");
-      const modalContainer = document.querySelector("[data-modal-container]");
-      const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
-      const overlay = document.querySelector("[data-overlay]");
+                <div class="project-card" data-category="python">
+                    <div class="project-card-top">
+                        <span class="project-lang"><span class="lang-dot" style="background: #3776AB;"></span> Python</span>
+                        <div class="project-icon-large"><i class="fa fa-folder-open"></i></div>
+                    </div>
+                    <div class="project-card-bottom">
+                        <h4>File Organizer</h4>
+                        <p>Automated file organization script that sorts files into folders by type, date, or custom rules.</p>
+                        <div class="project-stats">
+                            <span><i class="fa fa-gear"></i> Automation</span>
+                            <span><i class="fa fa-folder"></i> Files</span>
+                        </div>
+                        <div class="project-buttons">
+                            <a href="https://github.com/jotape12-Dev/organizador-arquivos" target="_blank" class="btn-repo"><i class="fa-brands fa-github"></i> Repository</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      const toggleModal = function () {
-        modalContainer.classList.toggle("active");
-      }
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title-decorative">Send a <span class="text-accent">Message</span></h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Have a project in mind or just want to connect? Send me a message and let's create something amazing together.</p>
+            </div>
 
-      if (modalBtn) modalBtn.addEventListener("click", toggleModal);
-      if (modalCloseBtn) modalCloseBtn.addEventListener("click", toggleModal);
-      if (overlay) overlay.addEventListener("click", toggleModal);
-    </script>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3 class="contact-info-title">Let's <span class="text-accent">Connect</span></h3>
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon"><i class="fa fa-envelope"></i></div>
+                        <div>
+                            <span class="contact-label">Email</span>
+                            <strong>joaopauloalbuquerque606@gmail.com</strong>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon"><i class="fa fa-location-dot"></i></div>
+                        <div>
+                            <span class="contact-label">Location</span>
+                            <strong>Brasilia, Brazil</strong>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon"><i class="fa fa-phone"></i></div>
+                        <div>
+                            <span class="contact-label">Phone</span>
+                            <strong>+55 (61) 99199-5261</strong>
+                        </div>
+                    </div>
+
+                    <hr class="contact-divider">
+
+                    <h4 class="follow-title">Follow Me</h4>
+                    <div class="contact-socials">
+                        <a href="https://github.com/jotape12-Dev" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="http://www.linkedin.com/in/joao-paulo-albuquerque-de-almeida-marques-2a6b6b2a8" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/_.jotape__/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <h3 class="contact-form-title">Send a <span class="text-accent">Message</span></h3>
+                    <form action="https://formspree.io/f/xdoqwqde" method="POST" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Your Name</label>
+                                <input type="text" name="Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Your Email</label>
+                                <input type="email" name="Email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Subject</label>
+                            <select name="Subject" required>
+                                <option value="" disabled selected>Select a subject</option>
+                                <option value="Project Inquiry">Project Inquiry</option>
+                                <option value="Job Opportunity">Job Opportunity</option>
+                                <option value="Collaboration">Collaboration</option>
+                                <option value="General">General</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Your Message</label>
+                            <textarea name="Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            Send Message <i class="fa fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <span class="logo-icon">&#10006;</span>
+                    <span class="logo-text"><span class="logo-highlight">J</span>OTAPE PORTFOLIO</span>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://github.com/jotape12-Dev" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="http://www.linkedin.com/in/joao-paulo-albuquerque-de-almeida-marques-2a6b6b2a8" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="mailto:joaopauloalbuquerque606@gmail.com"><i class="fa fa-envelope"></i></a>
+                    <a href="https://www.instagram.com/_.jotape__/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/5561991995261" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Jotape. All rights reserved.</p>
+                <p class="footer-credit">Designed and Developed by <span class="logo-icon-small">&#10006;</span> <span class="text-accent">Jotape</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Typed.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
+    <!-- Main JS -->
+    <script src="js/script.js"></script>
 </body>
 </html>
