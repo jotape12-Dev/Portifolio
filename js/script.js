@@ -201,14 +201,57 @@ setTimeout(initScrollAnimations, 100);
 const style = document.createElement('style');
 style.textContent = `
     @keyframes fadeInCard {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        from { opacity: 0; transform: translateY(20px); }
+        to   { opacity: 1; transform: translateY(0); }
     }
 `;
 document.head.appendChild(style);
+
+/* ========== Contact Form — AJAX Submission ========== */
+const contactForm = document.querySelector('.contact-form');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+
+        // Loading state
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Sending...';
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: new FormData(contactForm),
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+                // Success
+                contactForm.reset();
+                submitBtn.innerHTML = '<i class="fa fa-check"></i> Message Sent!';
+                submitBtn.style.background = '#22c55e';
+
+                setTimeout(() => {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.style.background = '';
+                    submitBtn.disabled = false;
+                }, 4000);
+            } else {
+                throw new Error('Server error');
+            }
+        } catch (err) {
+            // Error
+            submitBtn.innerHTML = '<i class="fa fa-xmark"></i> Failed — try again';
+            submitBtn.style.background = '#ef4444';
+
+            setTimeout(() => {
+                submitBtn.innerHTML = originalText;
+                submitBtn.style.background = '';
+                submitBtn.disabled = false;
+            }, 4000);
+        }
+    });
+}
