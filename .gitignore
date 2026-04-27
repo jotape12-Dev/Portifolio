@@ -3,3 +3,5 @@ img/.DS_Store
 node_modules/
 dist/
 .env
+
+CLAUDE.md
