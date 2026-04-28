@@ -252,6 +252,25 @@ img {
     background: var(--accent);
 }
 
+.nav-lang-btn {
+    padding: 8px 14px;
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 700;
+    font-family: var(--font-body);
+    letter-spacing: 0.08em;
+    cursor: none;
+    transition: all 0.3s ease;
+}
+
+.nav-lang-btn:hover {
+    background: var(--accent);
+    color: #ffffff;
+}
+
 .nav-toggle {
     display: none;
     font-size: 24px;
@@ -1141,6 +1160,10 @@ img {
         gap: 30px;
         transition: right 0.3s ease;
         border-left: 1px solid var(--border-color);
+    }
+
+    .nav-lang-btn {
+        cursor: pointer;
     }
 
     .nav-menu.active {

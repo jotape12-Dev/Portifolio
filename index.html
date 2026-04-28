@@ -29,10 +29,11 @@
                 <span class="logo-text"><span class="logo-highlight">J</span>OÃO PAULO</span>
             </a>
             <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link active" data-section="home">Home</a>
-                <a href="#about" class="nav-link" data-section="about">About</a>
-                <a href="#projects" class="nav-link" data-section="projects">Projects</a>
-                <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+                <a href="#home" class="nav-link active" data-section="home" data-i18n="nav.home">Home</a>
+                <a href="#about" class="nav-link" data-section="about" data-i18n="nav.about">About</a>
+                <a href="#projects" class="nav-link" data-section="projects" data-i18n="nav.projects">Projects</a>
+                <a href="#contact" class="nav-link" data-section="contact" data-i18n="nav.contact">Contact</a>
+                <button type="button" class="nav-lang-btn" id="lang-toggle" aria-label="Switch language">PT</button>
             </div>
             <div class="nav-toggle" id="nav-toggle">
                 <i class="fa fa-bars"></i>
@@ -46,20 +47,20 @@
             <h1 class="hero-title">
                 <span class="typing-text"></span><span class="typing-cursor">|</span>
             </h1>
-            <p class="hero-subtitle">
+            <p class="hero-subtitle" data-i18n="hero.subtitle">
                 Software Developer focused on native iOS and Android apps, with experience in Swift, Kotlin, Flutter, and React Native — forging digital experiences with precision and creativity.
             </p>
             <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">
+                <a href="#projects" class="btn btn-primary" data-i18n="hero.ctaWork">
                     View My Work <i class="fa fa-arrow-right"></i>
                 </a>
-                <a href="#contact" class="btn btn-outline">
+                <a href="#contact" class="btn btn-outline" data-i18n="hero.ctaContact">
                     Contact Me
                 </a>
             </div>
         </div>
         <div class="scroll-indicator">
-            <span>Scroll Down</span>
+            <span data-i18n="hero.scroll">Scroll Down</span>
             <i class="fa fa-arrow-down"></i>
         </div>
     </section>
@@ -68,9 +69,9 @@
     <section class="section skills-section" id="skills">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title-decorative">Skilled In</h2>
+                <h2 class="section-title-decorative" data-i18n="skills.title">Skilled In</h2>
                 <div class="title-underline"></div>
-                <p class="section-subtitle">From pixel-perfect designs to scalable architectures, my development style is a crafted blend of artistry and engineering. These are the techniques I wield.</p>
+                <p class="section-subtitle" data-i18n="skills.subtitle">From pixel-perfect designs to scalable architectures, my development style is a crafted blend of artistry and engineering. These are the techniques I wield.</p>
             </div>
 
             <div class="skills-categories">
@@ -143,9 +144,9 @@
     <section class="section cta-section">
         <div class="container">
             <div class="cta-card">
-                <h2 class="cta-title">Ready to <span class="text-accent">Ignite</span> Your Next Project?</h2>
-                <p class="cta-text">Let's collaborate and bring your vision to life with precision, creativity, and cutting-edge technology.</p>
-                <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                <h2 class="cta-title" data-i18n="cta.title">Ready to <span class="text-accent">Ignite</span> Your Next Project?</h2>
+                <p class="cta-text" data-i18n="cta.text">Let's collaborate and bring your vision to life with precision, creativity, and cutting-edge technology.</p>
+                <a href="#contact" class="btn btn-primary" data-i18n="cta.button">Get in Touch</a>
             </div>
         </div>
     </section>
@@ -154,40 +155,40 @@
     <section class="section about-section" id="about">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title-decorative">Character Profile</h2>
+                <h2 class="section-title-decorative" data-i18n="about.title">Character Profile</h2>
                 <div class="title-underline"></div>
             </div>
 
             <div class="about-content">
-                <h3 class="about-headline">
+                <h3 class="about-headline" data-i18n="about.headline">
                     <span class="text-accent">Software Developer</span> focused on native iOS and Android apps, forging digital experiences with precision and creativity.
                 </h3>
 
                 <div class="about-paragraphs">
-                    <p>Specialized in Swift/SwiftUI for iOS and Kotlin/Java for Android, with expertise in MVVM, Clean Architecture and VIPER patterns. Hands-on experience integrating REST APIs, data persistence with SwiftData and Room, and mobile security best practices (Keychain, SSL Pinning).</p>
-                    <p>At the Apple Developer Academy, I lead the conception and publication of apps on the App Store with an average rating of 4.8 stars, collaborating in multidisciplinary squads under CBL/Scrum methodology and delivering 100% of sprints on time.</p>
-                    <p>Beyond native mobile, I build cross-platform apps with Flutter and React Native, and have experience in web development with React, TypeScript and Tailwind — always seeking to master new forms of development.</p>
+                    <p data-i18n="about.p1">Specialized in Swift/SwiftUI for iOS and Kotlin/Java for Android, with expertise in MVVM, Clean Architecture and VIPER patterns. Hands-on experience integrating REST APIs, data persistence with SwiftData and Room, and mobile security best practices (Keychain, SSL Pinning).</p>
+                    <p data-i18n="about.p2">At the Apple Developer Academy, I lead the conception and publication of apps on the App Store with an average rating of 4.8 stars, collaborating in multidisciplinary squads under CBL/Scrum methodology and delivering 100% of sprints on time.</p>
+                    <p data-i18n="about.p3">Beyond native mobile, I build cross-platform apps with Flutter and React Native, and have experience in web development with React, TypeScript and Tailwind — always seeking to master new forms of development.</p>
                 </div>
 
                 <div class="about-cards">
                     <div class="about-card">
                         <div class="about-card-icon"><i class="fa fa-mobile-screen-button"></i></div>
-                        <h4>Technical Skills</h4>
-                        <p>Swift, SwiftUI, Kotlin, Flutter, React Native, TypeScript, React, Node.js</p>
+                        <h4 data-i18n="about.card1Title">Technical Skills</h4>
+                        <p data-i18n="about.card1Text">Swift, SwiftUI, Kotlin, Flutter, React Native, TypeScript, React, Node.js</p>
                     </div>
                     <div class="about-card">
                         <div class="about-card-icon"><i class="fa fa-medal"></i></div>
-                        <h4>Specialties</h4>
-                        <p>iOS & Android Native, MVVM/Clean Architecture, Cross-Platform, App Store Publishing</p>
+                        <h4 data-i18n="about.card2Title">Specialties</h4>
+                        <p data-i18n="about.card2Text">iOS & Android Native, MVVM/Clean Architecture, Cross-Platform, App Store Publishing</p>
                     </div>
                 </div>
             </div>
 
             <!-- Journey & Experience -->
             <div class="section-header" style="margin-top: 80px;">
-                <h2 class="section-title-decorative">Journey & Experience</h2>
+                <h2 class="section-title-decorative" data-i18n="journey.title">Journey & Experience</h2>
                 <div class="title-underline"></div>
-                <p class="section-subtitle">My path as a developer, forged through dedication and continuous growth.</p>
+                <p class="section-subtitle" data-i18n="journey.subtitle">My path as a developer, forged through dedication and continuous growth.</p>
             </div>
 
             <div class="timeline">
@@ -225,18 +226,18 @@
     <section class="section projects-section" id="projects">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title-decorative">Dev Projects</h2>
+                <h2 class="section-title-decorative" data-i18n="projects.title">Dev Projects</h2>
                 <div class="title-underline"></div>
-                <p class="section-subtitle">Discover my projects, each crafted with precision and attention to detail — like the futuristic art of Development.</p>
+                <p class="section-subtitle" data-i18n="projects.subtitle">Discover my projects, each crafted with precision and attention to detail — like the futuristic art of Development.</p>
             </div>
 
             <div class="project-filters">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="swift">Swift / iOS</button>
-                <button class="filter-btn" data-filter="flutter">Flutter</button>
-                <button class="filter-btn" data-filter="react-native">React Native</button>
-                <button class="filter-btn" data-filter="react">React / Web</button>
-                <button class="filter-btn" data-filter="python">Python</button>
+                <button class="filter-btn active" data-filter="all" data-i18n="projects.filterAll">All Projects</button>
+                <button class="filter-btn" data-filter="swift" data-i18n="projects.filterSwift">Swift / iOS</button>
+                <button class="filter-btn" data-filter="flutter" data-i18n="projects.filterFlutter">Flutter</button>
+                <button class="filter-btn" data-filter="react-native" data-i18n="projects.filterReactNative">React Native</button>
+                <button class="filter-btn" data-filter="react" data-i18n="projects.filterReactWeb">React / Web</button>
+                <button class="filter-btn" data-filter="python" data-i18n="projects.filterPython">Python</button>
             </div>
 
             <div class="projects-grid">
@@ -477,9 +478,9 @@
     <section class="section contact-section" id="contact">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title-decorative">Let's <span class="text-accent">Talk</span></h2>
+                <h2 class="section-title-decorative" data-i18n="contact.title">Let's <span class="text-accent">Talk</span></h2>
                 <div class="title-underline"></div>
-                <p class="section-subtitle">Have a project in mind or just want to connect? Reach out directly — I'm always open to new opportunities and collaborations.</p>
+                <p class="section-subtitle" data-i18n="contact.subtitle">Have a project in mind or just want to connect? Reach out directly — I'm always open to new opportunities and collaborations.</p>
             </div>
 
             <div class="contact-centered">
@@ -495,8 +496,8 @@
                     <div class="contact-card">
                         <div class="contact-icon"><i class="fa fa-location-dot"></i></div>
                         <div>
-                            <span class="contact-label">Location</span>
-                            <strong>Brasília, Brazil</strong>
+                            <span class="contact-label" data-i18n="contact.locationLabel">Location</span>
+                            <strong data-i18n="contact.locationValue">Brasília, Brazil</strong>
                         </div>
                     </div>
                     <a href="https://www.linkedin.com/in/joao-paulo-albuquerque-de-almeida-marques-2a6b6b2a8" target="_blank" class="contact-card">
@@ -520,14 +521,14 @@
                     <div class="whatsapp-icon-wrap">
                         <i class="fa-brands fa-whatsapp"></i>
                     </div>
-                    <h3 class="whatsapp-title">Send me a message on WhatsApp</h3>
-                    <p class="whatsapp-subtitle">I usually reply within a few hours. Click the button below and let's start a conversation.</p>
+                    <h3 class="whatsapp-title" data-i18n="contact.whatsTitle">Send me a message on WhatsApp</h3>
+                    <p class="whatsapp-subtitle" data-i18n="contact.whatsSubtitle">I usually reply within a few hours. Click the button below and let's start a conversation.</p>
                     <a
                         href="https://wa.me/5561991995261?text=Hi%20Jo%C3%A3o%20Paulo!%20I%20came%20across%20your%20portfolio%20and%20I%27d%20love%20to%20talk%20about%20a%20project%20%2F%20opportunity."
                         target="_blank"
                         class="btn btn-whatsapp"
                     >
-                        <i class="fa-brands fa-whatsapp"></i> Message on WhatsApp
+                        <span data-i18n="contact.whatsButton"><i class="fa-brands fa-whatsapp"></i> Message on WhatsApp</span>
                     </a>
                 </div>
             </div>
@@ -551,8 +552,8 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 João Paulo Albuquerque de Almeida Marques'. All rights reserved.</p>
-                <p class="footer-credit">Designed and Developed by <span class="logo-icon-small">&#10006;</span> <span class="text-accent">Jotape</span></p>
+                <p data-i18n="footer.rights">&copy; 2026 João Paulo Albuquerque de Almeida Marques'. All rights reserved.</p>
+                <p class="footer-credit" data-i18n="footer.credit">Designed and Developed by <span class="logo-icon-small">&#10006;</span> <span class="text-accent">Jotape</span></p>
             </div>
         </div>
     </footer>
